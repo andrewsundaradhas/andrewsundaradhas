@@ -28,8 +28,8 @@ export default function AboutWindow() {
                 alt="Andrew Sundaradhas"
                 className="w-full h-full object-cover"
                 style={{
-                  objectPosition: "center 20%", // Perfectly centered on your face
-                  transform: "scale(1.2)", // Optimized zoom to ensure face fills the circle
+                  objectPosition: "center 40%", // Adjusted to show full face including chin
+                  transform: "scale(0.9)", // Reduced scale to fit more of your face in the circle
                 }}
               />
             </div>
