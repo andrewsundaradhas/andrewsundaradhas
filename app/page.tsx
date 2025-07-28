@@ -15,7 +15,7 @@ export default function MacOSPortfolio() {
   const [isBooting, setIsBooting] = useState(false)
   const [windows, setWindows] = useState<AppWindow[]>([])
   const [nextZIndex, setNextZIndex] = useState(1000)
-  const isMobile = useMediaQuery({ maxWidth: 600 })
+  const isMobile = useMediaQuery({ maxWidth: 768 })
 
   useEffect(() => {
     const helloTimer = setTimeout(() => {
@@ -108,23 +108,12 @@ export default function MacOSPortfolio() {
 
       {/* Mobile Layout */}
       <div className="mobile-layout">
-        <div className="iphone-wrapper">
-          <div className="iphone-frame-svg">
-            <svg viewBox="0 0 375 812" className="w-full h-full">
-              <rect x="0" y="0" width="375" height="812" rx="59" ry="59" fill="#2a2a2a" />
-              <rect x="8" y="8" width="359" height="796" rx="51" ry="51" fill="#000" />
-              <rect x="12" y="12" width="351" height="788" rx="47" ry="47" fill="transparent" />
-            </svg>
-          </div>
-          <div className="iphone-content">
-            <MobileLayout 
-              openWindow={openWindow} 
-              windows={windows} 
-              closeWindow={closeWindow} 
-              bringToFront={bringToFront} 
-            />
-          </div>
-        </div>
+        <MobileLayout 
+          openWindow={openWindow} 
+          windows={windows} 
+          closeWindow={closeWindow} 
+          bringToFront={bringToFront} 
+        />
       </div>
     </>
   )

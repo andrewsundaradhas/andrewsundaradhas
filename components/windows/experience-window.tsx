@@ -39,14 +39,14 @@ export default function ExperienceWindow() {
   ]
 
   return (
-    <div className="text-white scroll-container mobile-window-content" style={{ maxHeight: "calc(80vh - 32px)" }}>
+    <div className="text-white">
       <h2 className="text-2xl font-bold mb-6 text-center text-white tracking-tight">Professional Experience</h2>
 
-      <div className="scroll-container space-y-6" style={{ maxHeight: "320px" }}>
+      <div className="space-y-6">
         {experiences.map((exp, index) => (
           <div
             key={index}
-            className="bg-white/8 backdrop-blur-sm rounded-xl p-5 border border-white/10 hover:bg-white/12 hover:border-blue-400/20 transition-all duration-300"
+            className="mobile-card"
             style={{
               animation: `slideInLeft 0.6s ease-out ${index * 0.2}s both`,
             }}

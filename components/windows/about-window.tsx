@@ -7,7 +7,7 @@ export default function AboutWindow() {
   const [isFlipped, setIsFlipped] = useState(false)
 
   return (
-    <div className="text-white scroll-container mobile-window-content" style={{ maxHeight: "calc(80vh - 32px)" }}>
+    <div className="text-white">
       {/* Profile Card with Flip Animation */}
       <div className="flex justify-center mb-6">
         <div

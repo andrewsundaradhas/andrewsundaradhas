@@ -158,13 +158,10 @@ export default function SkillsWindow() {
   ]
 
   return (
-    <div className="text-white scroll-container mobile-window-content" style={{ maxHeight: "calc(80vh - 32px)" }}>
+    <div className="text-white">
       <h2 className="text-2xl font-bold mb-6 text-center">Technical Skills</h2>
 
-      <div
-        className="scroll-container grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3"
-        style={{ maxHeight: "320px" }}
-      >
+      <div className="mobile-grid">
         {skills.map((skill, index) => (
           <div
             key={skill.name}
