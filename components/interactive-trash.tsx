@@ -232,7 +232,7 @@ export default function InteractiveTrash({ isOpen, onClose }: InteractiveTrashPr
         <div className="action-buttons">
           {showUndo && (
             <button onClick={handleUndo} className="undo-button">
-              ↶ Undo "{lastDeleted}"
+              ↶ Undo &quot;{lastDeleted}&quot;
             </button>
           )}
           <button onClick={handleReset} className="reset-button">
@@ -244,7 +244,7 @@ export default function InteractiveTrash({ isOpen, onClose }: InteractiveTrashPr
         {negativeWords.length === 0 && (
           <div className="success-message">
             <div className="text-4xl mb-3">🎉</div>
-            <p className="text-green-400 font-bold text-lg">Amazing! You've cleared all negativity!</p>
+            <p className="text-green-400 font-bold text-lg">Amazing! You&apos;ve cleared all negativity!</p>
             <p className="text-gray-300 text-sm mt-2">Your mindset is now clean and positive! ✨</p>
           </div>
         )}

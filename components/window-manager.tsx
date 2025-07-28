@@ -81,7 +81,7 @@ export default function WindowManager({ windows, onClose, onUpdatePosition, onBr
         document.removeEventListener("mouseup", handleMouseUp)
       }
     }
-  }, [dragState])
+  }, [dragState, handleMouseMove, handleMouseUp])
 
   const renderWindowContent = (window: Window) => {
     switch (window.type) {
