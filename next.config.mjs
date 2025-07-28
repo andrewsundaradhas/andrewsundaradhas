@@ -9,7 +9,6 @@ const nextConfig = {
   experimental: {
     optimizePackageImports: ['lucide-react'],
   },
-  swcMinify: true,
   compress: true,
   poweredByHeader: false,
   reactStrictMode: true,

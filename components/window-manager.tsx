@@ -2,7 +2,7 @@
 
 import type React from "react"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useCallback } from "react"
 import AboutWindow from "./windows/about-window"
 import SkillsWindow from "./windows/skills-window"
 import ExperienceWindow from "./windows/experience-window"
@@ -49,7 +49,7 @@ export default function WindowManager({ windows, onClose, onUpdatePosition, onBr
     onBringToFront(windowId)
   }
 
-  const handleMouseMove = (e: MouseEvent) => {
+  const handleMouseMove = useCallback((e: MouseEvent) => {
     if (!dragState.isDragging || !dragState.windowId) return
 
     const newPosition = {
@@ -62,15 +62,15 @@ export default function WindowManager({ windows, onClose, onUpdatePosition, onBr
     newPosition.y = Math.max(28, Math.min(window.innerHeight - 300, newPosition.y))
 
     onUpdatePosition(dragState.windowId, newPosition)
-  }
+  }, [dragState, onUpdatePosition])
 
-  const handleMouseUp = () => {
+  const handleMouseUp = useCallback(() => {
     setDragState({
       isDragging: false,
       windowId: null,
       offset: { x: 0, y: 0 },
     })
-  }
+  }, [])
 
   useEffect(() => {
     if (dragState.isDragging) {

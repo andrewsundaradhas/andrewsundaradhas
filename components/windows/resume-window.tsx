@@ -1,5 +1,7 @@
 "use client"
 
+import Image from "next/image"
+
 export default function ResumeWindow() {
   const handleDownload = () => {
     // Download the actual resume image
@@ -18,10 +20,12 @@ export default function ResumeWindow() {
 
       {/* Resume Preview */}
       <div className="bg-white rounded-lg p-4 mb-6 text-black min-h-[400px] max-h-[500px] overflow-hidden">
-        <div className="w-full h-full flex items-center justify-center">
-          <img
+        <div className="w-full h-full flex items-center justify-center relative">
+          <Image
             src="/resume-andrew-sundaradhas.png"
             alt="Andrew Sundaradhas Resume"
+            width={400}
+            height={450}
             className="max-w-full max-h-full object-contain"
             style={{ maxHeight: "450px" }}
           />

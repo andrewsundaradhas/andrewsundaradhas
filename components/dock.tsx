@@ -31,6 +31,8 @@ export default function Dock({ onOpenWindow }: DockProps) {
           title: "Resume.pdf",
           type: "resume",
           icon: "📄",
+          position: { x: 100, y: 100 },
+          zIndex: 1000,
         }),
     },
     {
@@ -43,6 +45,8 @@ export default function Dock({ onOpenWindow }: DockProps) {
           title: "Contact",
           type: "contact",
           icon: "📧",
+          position: { x: 100, y: 100 },
+          zIndex: 1000,
         }),
     },
     {
@@ -55,6 +59,8 @@ export default function Dock({ onOpenWindow }: DockProps) {
           title: "Contact",
           type: "contact",
           icon: "📧",
+          position: { x: 100, y: 100 },
+          zIndex: 1000,
         }),
     },
     {
@@ -67,6 +73,8 @@ export default function Dock({ onOpenWindow }: DockProps) {
           title: "About Me",
           type: "about",
           icon: "👤",
+          position: { x: 100, y: 100 },
+          zIndex: 1000,
         }),
     },
     {
@@ -79,6 +87,8 @@ export default function Dock({ onOpenWindow }: DockProps) {
           title: "Experience",
           type: "experience",
           icon: "💼",
+          position: { x: 100, y: 100 },
+          zIndex: 1000,
         }),
     },
     {

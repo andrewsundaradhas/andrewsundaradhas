@@ -44,6 +44,8 @@ export default function MenuBar({ onOpenWindow }: MenuBarProps) {
           title: "About Me",
           type: "about",
           icon: "👤",
+          position: { x: 100, y: 100 },
+          zIndex: 1000,
         }),
     },
     {
@@ -54,6 +56,8 @@ export default function MenuBar({ onOpenWindow }: MenuBarProps) {
           title: "Experience",
           type: "experience",
           icon: "💼",
+          position: { x: 100, y: 100 },
+          zIndex: 1000,
         }),
     },
     {
@@ -64,6 +68,8 @@ export default function MenuBar({ onOpenWindow }: MenuBarProps) {
           title: "Skills",
           type: "skills",
           icon: "⚡",
+          position: { x: 100, y: 100 },
+          zIndex: 1000,
         }),
     },
     {
@@ -74,6 +80,8 @@ export default function MenuBar({ onOpenWindow }: MenuBarProps) {
           title: "Contact",
           type: "contact",
           icon: "📧",
+          position: { x: 100, y: 100 },
+          zIndex: 1000,
         }),
     },
   ]

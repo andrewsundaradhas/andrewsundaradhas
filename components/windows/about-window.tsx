@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import Image from "next/image"
 
 export default function AboutWindow() {
   const [isFlipped, setIsFlipped] = useState(false)
@@ -23,13 +24,14 @@ export default function AboutWindow() {
           >
             {/* Front - Professional Photo */}
             <div className="absolute inset-0 w-full h-full backface-hidden rounded-full overflow-hidden border-4 border-white/30 shadow-lg card">
-              <img
+              <Image
                 src="/andrew-profile.jpg"
                 alt="Andrew Sundaradhas"
-                className="w-full h-full object-cover"
+                fill
+                className="object-cover"
                 style={{
-                  objectPosition: "center 25%", // Lifted face position higher
-                  transform: "scale(1.05)", // Perfect scale to fit face and tie in circle
+                  objectPosition: "center 35%", // Adjusted to center face and show collar/tie
+                  transform: "scale(0.92) translateY(-28px)", // Zoom out and move up for professional crop
                 }}
               />
             </div>
