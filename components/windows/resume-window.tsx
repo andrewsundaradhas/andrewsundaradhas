@@ -12,7 +12,7 @@ export default function ResumeWindow() {
   }
 
   return (
-    <div className="text-white">
+    <div className="text-white scroll-container mobile-window-content" style={{ maxHeight: "calc(80vh - 32px)" }}>
       <div className="text-center mb-6">
         <h2 className="text-2xl font-bold mb-2">Resume</h2>
         <p className="text-gray-300">Andrew Sundaradhas - Robotics Engineer & Operations Director</p>

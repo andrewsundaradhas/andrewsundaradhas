@@ -39,7 +39,7 @@ export default function ExperienceWindow() {
   ]
 
   return (
-    <div className="text-white">
+    <div className="text-white scroll-container mobile-window-content" style={{ maxHeight: "calc(80vh - 32px)" }}>
       <h2 className="text-2xl font-bold mb-6 text-center text-white tracking-tight">Professional Experience</h2>
 
       <div className="scroll-container space-y-6" style={{ maxHeight: "320px" }}>

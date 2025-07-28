@@ -322,6 +322,14 @@
     border-radius: 47px;
     overflow: hidden;
     background: #000000;
+    padding: 0 8px 64px 8px; /* Add horizontal and bottom padding for mobile */
+  }
+
+  /* Utility for window content padding on mobile */
+  .mobile-window-content {
+    padding-bottom: 2.5rem; /* Prevent overlap with dock/home indicator */
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
 
   /* Mobile-specific window styling */
