@@ -1,5 +1,10 @@
 "use client"
-import WindowManager from "./window-manager"
+
+import AboutWindow from "./windows/about-window"
+import SkillsWindow from "./windows/skills-window"
+import ExperienceWindow from "./windows/experience-window"
+import ContactWindow from "./windows/contact-window"
+import ResumeWindow from "./windows/resume-window"
 
 interface Window {
   id: string
@@ -69,7 +74,8 @@ export default function MobileLayout({ openWindow, windows, closeWindow, bringTo
                     e.stopPropagation()
                     closeWindow(window.id)
                   }}
-                  className="w-8 h-8 rounded-full bg-red-500 flex items-center justify-center text-white text-sm font-bold"
+                  className="w-10 h-10 rounded-full bg-red-500 flex items-center justify-center text-white text-lg font-bold hover:bg-red-400 transition-colors"
+                  style={{ minWidth: '40px', minHeight: '40px' }}
                 >
                   ×
                 </button>
@@ -136,10 +142,3 @@ export default function MobileLayout({ openWindow, windows, closeWindow, bringTo
     }
   }
 }
-
-// Import window components
-import AboutWindow from "./windows/about-window"
-import SkillsWindow from "./windows/skills-window"
-import ExperienceWindow from "./windows/experience-window"
-import ContactWindow from "./windows/contact-window"
-import ResumeWindow from "./windows/resume-window"

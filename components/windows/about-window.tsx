@@ -30,8 +30,8 @@ export default function AboutWindow() {
                 fill
                 className="object-cover"
                 style={{
-                  objectPosition: "center 35%", // Adjusted to center face and show collar/tie
-                  transform: "scale(0.92) translateY(-28px)", // Zoom out and move up for professional crop
+                  objectPosition: "center 25%", // Adjusted to show more of the upper body including tie
+                  transform: "scale(0.85) translateY(-20px)", // Zoom out more and move up less to show tie and suit
                 }}
               />
             </div>

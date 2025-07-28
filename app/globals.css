@@ -270,6 +270,16 @@
 /* Mobile-First Responsive Design */
 /* Base mobile styles (up to 768px) */
 @media (max-width: 768px) {
+  /* Hide desktop layout on mobile */
+  .desktop-layout {
+    display: none !important;
+  }
+
+  /* Show mobile layout on mobile */
+  .mobile-layout {
+    display: block !important;
+  }
+
   /* Fluid Typography */
   html {
     font-size: 14px; /* Base font size for mobile */
@@ -408,6 +418,13 @@
   .mobile-scroll::-webkit-scrollbar {
     display: none;
   }
+
+  /* Fix mobile window close button */
+  .mobile-window .w-8.h-8 {
+    min-width: 32px;
+    min-height: 32px;
+    touch-action: manipulation;
+  }
 }
 
 /* Tablet styles (768px - 1024px) */
@@ -428,7 +445,7 @@
   }
 
   .mobile-layout {
-    display: none;
+    display: none !important;
   }
 }
 
