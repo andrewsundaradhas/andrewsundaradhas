@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import { useMediaQuery } from "react-responsive"
 import HelloAnimation from "@/components/hello-animation"
 import BootAnimation from "@/components/boot-animation"
 import MenuBar from "@/components/menu-bar"
@@ -14,6 +15,7 @@ export default function MacOSPortfolio() {
   const [isBooting, setIsBooting] = useState(false)
   const [windows, setWindows] = useState<AppWindow[]>([])
   const [nextZIndex, setNextZIndex] = useState(1000)
+  const isMobile = useMediaQuery({ maxWidth: 600 })
 
   useEffect(() => {
     const helloTimer = setTimeout(() => {
@@ -30,6 +32,23 @@ export default function MacOSPortfolio() {
       clearTimeout(bootTimer)
     }
   }, [])
+
+  // Open About window by default on mobile
+  useEffect(() => {
+    if (isMobile && windows.length === 0 && !showHello && !isBooting) {
+      setWindows([
+        {
+          id: "about",
+          title: "About",
+          type: "about",
+          icon: "👤",
+          position: { x: 50, y: 50 },
+          zIndex: nextZIndex,
+        },
+      ])
+      setNextZIndex((prev) => prev + 1)
+    }
+  }, [isMobile, windows.length, showHello, isBooting, nextZIndex])
 
   const openWindow = (windowData: AppWindow) => {
     const existingWindow = windows.find((w) => w.id === windowData.id)
