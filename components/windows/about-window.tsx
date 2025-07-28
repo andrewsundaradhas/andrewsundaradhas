@@ -28,7 +28,7 @@ export default function AboutWindow() {
                 alt="Andrew Sundaradhas"
                 className="w-full h-full object-cover"
                 style={{
-                  objectPosition: "center 35%", // Optimized to show face up to tie
+                  objectPosition: "center 25%", // Lifted face position higher
                   transform: "scale(1.05)", // Perfect scale to fit face and tie in circle
                 }}
               />
