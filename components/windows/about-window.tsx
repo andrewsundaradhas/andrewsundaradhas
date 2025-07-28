@@ -28,8 +28,8 @@ export default function AboutWindow() {
                 alt="Andrew Sundaradhas"
                 className="w-full h-full object-cover"
                 style={{
-                  objectPosition: "center 40%", // Adjusted to show full face including chin
-                  transform: "scale(0.9)", // Reduced scale to fit more of your face in the circle
+                  objectPosition: "center 35%", // Optimized to show face up to tie
+                  transform: "scale(1.05)", // Perfect scale to fit face and tie in circle
                 }}
               />
             </div>
@@ -54,8 +54,6 @@ export default function AboutWindow() {
         <div className="text-lg text-white font-bold">Context Engineer & Robotics Engineer</div>
 
         <p className="text-base text-white leading-relaxed font-normal">
-          I specialize in Drone Tech and Machine Learning, building systems that actually work.
-          <br />
           From autonomous drones to intelligent AI models — I make complex tech simple and effective.
           <br />
           If it flies, thinks, or needs to be smarter, I&apos;m your guy.

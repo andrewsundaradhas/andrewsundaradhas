@@ -190,7 +190,7 @@ export default function InteractiveTrash({ isOpen, onClose }: InteractiveTrashPr
         </div>
 
         {/* Instructions */}
-        <p className="text-gray-300 text-sm mb-6 text-center max-w-sm">
+        <p className="text-white/70 text-sm mb-6 text-center max-w-sm font-medium">
           Drag negative words into the trash to delete them from your mindset! 🧠✨
         </p>
 
@@ -281,9 +281,11 @@ export default function InteractiveTrash({ isOpen, onClose }: InteractiveTrashPr
           max-height: 90vh;
           margin: 0 auto;
           padding: 2vw 3vw;
-          background: #18181A;
-          border-radius: 24px;
-          box-shadow: 0 8px 48px rgba(0, 0, 0, 0.3);
+          background: rgba(0, 0, 0, 0.95);
+          backdrop-filter: blur(20px);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-radius: 16px;
+          box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -302,14 +304,15 @@ export default function InteractiveTrash({ isOpen, onClose }: InteractiveTrashPr
 
         .negative-word-chip {
           padding: 0.7em 1.3em;
-          border-radius: 2em;
-          background: linear-gradient(90deg, #321E28 60%, #314966 100%);
+          border-radius: 12px;
+          background: rgba(255, 255, 255, 0.08);
+          border: 1px solid rgba(255, 255, 255, 0.15);
           color: #FFF;
-          font-size: 1.1rem;
+          font-size: 1rem;
           font-weight: 500;
-          box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
           cursor: grab;
-          transition: box-shadow 0.18s, transform 0.18s;
+          transition: all 0.2s ease;
           user-select: none;
           touch-action: none;
           min-height: 40px;
@@ -319,6 +322,8 @@ export default function InteractiveTrash({ isOpen, onClose }: InteractiveTrashPr
         }
 
         .negative-word-chip:hover {
+          background: rgba(255, 255, 255, 0.12);
+          border-color: rgba(255, 255, 255, 0.25);
           box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
           transform: translateY(-2px);
         }
@@ -335,22 +340,22 @@ export default function InteractiveTrash({ isOpen, onClose }: InteractiveTrashPr
           width: 120px;
           height: 100px;
           margin: 12px auto 20px auto;
-          background: none;
+          background: rgba(255, 255, 255, 0.03);
           display: flex;
           flex-direction: column;
           align-items: center;
           justify-content: center;
-          transition: filter 0.18s, transform 0.18s;
-          border: 2px dashed rgba(255, 255, 255, 0.3);
-          border-radius: 16px;
+          transition: all 0.2s ease;
+          border: 2px dashed rgba(255, 255, 255, 0.2);
+          border-radius: 12px;
           padding: 16px;
         }
 
         .trash-zone.active {
-          filter: drop-shadow(0 0 18px rgba(240, 28, 117, 0.6)) drop-shadow(0 0 10px rgba(161, 255, 185, 0.6));
+          background: rgba(255, 255, 255, 0.08);
+          border-color: rgba(255, 255, 255, 0.4);
+          box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
           animation: trashWiggle 0.32s;
-          border-color: #4ade80;
-          background: rgba(74, 222, 128, 0.1);
         }
 
         .trash-icon {
@@ -360,7 +365,8 @@ export default function InteractiveTrash({ isOpen, onClose }: InteractiveTrashPr
         }
 
         .trash-zone.active .trash-icon {
-          transform: scale(1.2);
+          transform: scale(1.1);
+          color: rgba(255, 255, 255, 0.9);
         }
 
         .trash-label {
@@ -371,7 +377,7 @@ export default function InteractiveTrash({ isOpen, onClose }: InteractiveTrashPr
         }
 
         .trash-label.active {
-          color: #4ade80;
+          color: rgba(255, 255, 255, 0.9);
         }
 
         .action-buttons {
@@ -384,47 +390,49 @@ export default function InteractiveTrash({ isOpen, onClose }: InteractiveTrashPr
         }
 
         .undo-button {
-          background: #eab308;
+          background: rgba(255, 255, 255, 0.1);
+          border: 1px solid rgba(255, 255, 255, 0.2);
           color: white;
           font-weight: 600;
           padding: 12px 20px;
-          border-radius: 12px;
-          border: none;
+          border-radius: 8px;
           cursor: pointer;
-          transition: all 0.2s;
+          transition: all 0.2s ease;
           font-size: 0.9rem;
           animation: slideInButton 0.3s ease-out;
         }
 
         .undo-button:hover {
-          background: #ca8a04;
+          background: rgba(255, 255, 255, 0.15);
+          border-color: rgba(255, 255, 255, 0.3);
           transform: translateY(-2px);
         }
 
         .reset-button {
-          background: #6b7280;
+          background: rgba(255, 255, 255, 0.08);
+          border: 1px solid rgba(255, 255, 255, 0.15);
           color: white;
           font-weight: 600;
           padding: 12px 20px;
-          border-radius: 12px;
-          border: none;
+          border-radius: 8px;
           cursor: pointer;
-          transition: all 0.2s;
+          transition: all 0.2s ease;
           font-size: 0.9rem;
         }
 
         .reset-button:hover {
-          background: #4b5563;
+          background: rgba(255, 255, 255, 0.12);
+          border-color: rgba(255, 255, 255, 0.25);
           transform: translateY(-2px);
         }
 
         .success-message {
           margin-top: 20px;
           padding: 20px;
-          background: rgba(34, 197, 94, 0.2);
-          border: 1px solid rgba(34, 197, 94, 0.3);
-          border-radius: 16px;
-          text-center;
+          background: rgba(255, 255, 255, 0.05);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-radius: 12px;
+          text-align: center;
           animation: successPulse 0.6s ease-out;
         }
 
