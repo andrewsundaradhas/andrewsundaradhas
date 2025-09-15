@@ -1,7 +1,6 @@
 "use client"
 
 import { useState } from "react"
-import InteractiveTrash from "./interactive-trash"
 
 interface Window {
   id: string
@@ -18,7 +17,6 @@ interface DockProps {
 
 export default function Dock({ onOpenWindow }: DockProps) {
   const [hoveredIcon, setHoveredIcon] = useState<string | null>(null)
-  const [showTrash, setShowTrash] = useState(false)
 
   const dockItems = [
     {
@@ -91,14 +89,6 @@ export default function Dock({ onOpenWindow }: DockProps) {
           zIndex: 1000,
         }),
     },
-    {
-      id: "trash",
-      icon: "🗑️",
-      label: "Trash",
-      action: () => {
-        setShowTrash(true)
-      },
-    },
   ]
 
   return (
@@ -136,8 +126,6 @@ export default function Dock({ onOpenWindow }: DockProps) {
         </div>
       </div>
 
-      {/* Interactive Trash Modal */}
-      <InteractiveTrash isOpen={showTrash} onClose={() => setShowTrash(false)} />
     </>
   )
 }
